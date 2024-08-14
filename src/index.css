@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pop:hover {
+    transform: translateY(-5px);
+    transition: all .3s;
+}
