@@ -1,6 +1,6 @@
 import resume from "../src/assets/resume.pdf"
 import Card from "./components/card";
-import { GiPizzaSlice } from "react-icons/gi";
+import { GiMoneyStack, GiPizzaSlice } from "react-icons/gi";
 import { GiAirplaneDeparture } from "react-icons/gi";
 import { FiMapPin } from "react-icons/fi";
 import { BsGithub, BsLinkedin, BsPhone, BsWhatsapp } from "react-icons/bs";
@@ -38,6 +38,36 @@ function App() {
   function handleScroll(e) {
     smoothScroll('#contact-me', 800);
   }
+  const iconColor = "rgb(252 165 165 / var(--tw-border-opacity))";
+
+  const projects = [
+    {
+      title: "MS Gold",
+      icon: <GiMoneyStack size={30} color={iconColor} />,
+      summary: "This is a company's project I happened to be an active developer. It is an eCommerce web application for a precious metal and diamond selling company.",
+      link: "https://msgold.online",
+    },
+    {
+      title: "vacaytion",
+      icon: <FiMapPin size={30} color="rgb(252 165 165 / var(--tw-border-opacity))" />,
+      summary: "A world map that tracks your footsteps into every city you can think of. Never forget your wonderful experiences, and show your friends how you have wandered the world",
+      link: "https://vacaytion.vercel.app",
+    },
+    {
+      title: "Pizza Planet",
+      icon: <GiPizzaSlice size={30} color={iconColor} />,
+      summary: "A place where pizza lovers get to order their favorite pizzas from the comfort of their homes, with an experience like they were there in person.",
+      link: "https://twistedpizzaplanet.vercel.app",
+    },
+    {
+      title: "Nature Tourists",
+      icon: <GiAirplaneDeparture size={30} color={iconColor} />,
+      summary: "An HTML and CSS based static landing page for an imaginary travels and tourism agency.",
+      link: "https://naturetourist.vercel.app",
+    },
+    
+    
+  ]
 
   return (
     <>
@@ -62,27 +92,21 @@ function App() {
         </div>
       </section>
 
-      <section className="py-16 text-center bg-gray-700 border-red-300 border-y-2 lg:py-24 lg:border-y-4">
+      <section className="w-full py-16 text-center bg-gray-700 border-red-300 border-y-2 lg:py-24 lg:border-y-4">
         <h1 className="mb-8 text-2xl font-bold lg:mb-16 text-stone-300">Projects</h1>
-        <div className="flex flex-col items-center justify-center gap-5 lg:gap-10 lg:flex-row lg:mx-24 wrap">
-          <Card
-            title={"vacaytion"}
-            icon={<FiMapPin size={30} color="rgb(252 165 165 / var(--tw-border-opacity))" />}
-            summary={"A world map that tracks your footsteps into every city you can think of. Never forget your wonderful experiences, and show your friends how you have wandered the world"}
-            link={"https://vacaytion.vercel.app"}
-          />
-          <Card
-            title={"Pizza Planet"}
-            icon={<GiPizzaSlice size={30} color="rgb(252 165 165 / var(--tw-border-opacity))" />}
-            summary={"A place where pizza lovers get to order their favorite pizzas from the comfort of their homes, with an experience like they were there in person."}
-            link={"https://twistedpizzaplanet.vercel.app"}
-          />
-          <Card
-            title={"Nature Tourists"}
-            icon={<GiAirplaneDeparture size={30} color="rgb(252 165 165 / var(--tw-border-opacity))" />}
-            summary={"An HTML and CSS based static landing page for an imaginary travels and tourism agency."}
-            link={"https://naturetourist.vercel.app"}
-          />
+        <div className="flex flex-col flex-wrap items-center justify-center w-full gap-5 px-24 lg:gap-10 lg:flex-row">
+          {
+            projects.map((project) => (
+            <Card
+              title={project.title}
+              icon={project.icon}
+              summary={project.summary}
+              link={project.link}
+              key={project.title}
+            />
+          ))
+          }
+          
         </div>
       </section>
 
