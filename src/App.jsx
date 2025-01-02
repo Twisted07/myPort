@@ -40,13 +40,7 @@ function App() {
   }
   const iconColor = "rgb(252 165 165 / var(--tw-border-opacity))";
 
-  const projects = [
-    {
-      title: "MS Gold",
-      icon: <GiMoneyStack size={30} color={iconColor} />,
-      summary: "This is a company's project I happened to be an active developer. It is an eCommerce web application for a precious metal and diamond selling company.",
-      link: "https://msgold.online",
-    },
+  const personalProjects = [
     {
       title: "vacaytion",
       icon: <FiMapPin size={30} color="rgb(252 165 165 / var(--tw-border-opacity))" />,
@@ -66,8 +60,29 @@ function App() {
       link: "https://naturetourist.vercel.app",
     },
     
-    
-  ]
+  ];
+
+  const workProjects = [
+    {
+      title: "Pushbio (Uk) Limited",
+      icon: <GiMoneyStack size={30} color={iconColor} />,
+      summary: "Pushbio is a Content Management Platform that provides an all-in-one platform for content creators to manage their content, engage with their audience, and monetize their content.",
+      link: "https://pushbio.io"
+    },
+    {
+      title: "MS Gold",
+      icon: <GiMoneyStack size={30} color={iconColor} />,
+      summary: "This is a company's project I happened to be an active developer. It is an eCommerce web application for a precious metal and diamond selling company.",
+      link: "https://msgold.online",
+    },
+    {
+      title: "Period With Smile",
+      icon: <GiMoneyStack size={30} color={iconColor} />,
+      summary: "Period With Smile is a non-governmental organization that is about liberating every female child from period stress, and educating the male child on myths and ways to care for females.",
+      link: "https://periodwithsmile.vercel.app"
+    }
+
+  ];
 
   return (
     <>
@@ -93,10 +108,28 @@ function App() {
       </section>
 
       <section className="w-full py-16 text-center bg-gray-700 border-red-300 border-y-2 lg:py-24 lg:border-y-4">
-        <h1 className="mb-8 text-2xl font-bold lg:mb-16 text-stone-300">Projects</h1>
+        <h1 className="mb-8 text-2xl font-bold lg:mb-16 text-stone-300">Work Projects</h1>
         <div className="flex flex-col flex-wrap items-center justify-center w-full gap-5 px-24 lg:gap-10 lg:flex-row">
           {
-            projects.map((project) => (
+            workProjects.map((project) => (
+            <Card
+              title={project.title}
+              icon={project.icon}
+              summary={project.summary}
+              link={project.link}
+              key={project.title}
+            />
+          ))
+          }
+          
+        </div>
+      </section>
+
+      <section className="w-full py-16 text-center bg-gray-700 border-b-2 border-red-300 lg:py-24 lg:border-b-4">
+        <h1 className="mb-8 text-2xl font-bold lg:mb-16 text-stone-300">Personal Projects</h1>
+        <div className="flex flex-col flex-wrap items-center justify-center w-full gap-5 px-24 lg:gap-10 lg:flex-row">
+          {
+            personalProjects.map((project) => (
             <Card
               title={project.title}
               icon={project.icon}
@@ -113,7 +146,7 @@ function App() {
       <section className="pt-16 text-center pb-36 lg:pt-24 lg:pb-48 bg-stone-200">
         <h1 className="mb-16 text-2xl font-bold text-red-400 md:mb-20 lg:text-3xl">Contact Me</h1>
         <div className="flex items-center justify-center gap-5 md:gap-20">
-          <a href="https://www.linkedin.com/in/abdullateef-idris-aa436b245" className="pop" aria-label="linkedin" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/abdullateef-idris" className="pop" aria-label="linkedin" target="_blank" rel="noopener noreferrer">
             <BsLinkedin className="text-red-500 size-8 lg:size-[3rem]" />
           </a>
           <a href="https://wa.me/8118536771" className="pop" target="_blank">
@@ -125,7 +158,7 @@ function App() {
           <a href="tel:+2348118536771" className="pop" target="_blank">
             <BsPhone className="text-red-500 size-8 lg:size-[3rem]" />
           </a>
-          <a href="mailto:iamtwisted07@gmail.com" className="pop" target="_blank">
+          <a href="mailto:amyridris@gmail.com" className="pop" target="_blank">
             <BiLogoGmail className="text-red-500 size-8 lg:size-[3rem]" />
           </a>
         </div>
