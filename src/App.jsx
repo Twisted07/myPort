@@ -75,12 +75,12 @@ function App() {
       summary: "This is a company's project I happened to be an active developer. It is an eCommerce web application for a precious metal and diamond selling company.",
       link: "https://msgold.online",
     },
-    {
-      title: "Period With Smile",
-      icon: <GiMoneyStack size={30} color={iconColor} />,
-      summary: "Period With Smile is a non-governmental organization that is about liberating every female child from period stress, and educating the male child on myths and ways to care for females.",
-      link: "https://periodwithsmile.vercel.app"
-    }
+    // {
+    //   title: "Period With Smile",
+    //   icon: <GiMoneyStack size={30} color={iconColor} />,
+    //   summary: "Period With Smile is a non-governmental organization that is about liberating every female child from period stress, and educating the male child on myths and ways to care for females.",
+    //   link: "https://periodwithsmile.vercel.app"
+    // }
 
   ];
 
