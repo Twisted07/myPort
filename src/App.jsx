@@ -1,4 +1,4 @@
-import resume from "../src/assets/resume.pdf"
+import resume from "../src/assets/Idris_A_Resume.pdf"
 import Card from "./components/card";
 import { GiMoneyStack, GiPizzaSlice } from "react-icons/gi";
 import { GiAirplaneDeparture } from "react-icons/gi";
