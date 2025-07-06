@@ -7,6 +7,7 @@ import { BsGithub, BsLinkedin, BsPhone, BsWhatsapp } from "react-icons/bs";
 import { BiLogoGmail } from "react-icons/bi";
 import logo from "./assets/T1.png"
 import photo from "./assets/photo.jpg"
+import tawLogo from "./assets/tawLogo.png"
 
 function App() {
   function smoothScroll(target, duration) {
@@ -63,6 +64,12 @@ function App() {
   ];
 
   const workProjects = [
+    {
+      title: "The Abundant Wallet",
+      icon: <img src={tawLogo} alt="The Abundant Wallet Logo" className="size-8 lg:size-[3rem]" />,
+      summary: "The Abundant Wallet is a financial coaching and enlightment platform that provides financial education, coaching, and resources to help individuals and businesses achieve financial freedom.",
+      link: "https://theabundantwallet.com", 
+    },
     {
       title: "Pushbio (Uk) Limited",
       icon: <GiMoneyStack size={30} color={iconColor} />,
