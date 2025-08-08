@@ -3,6 +3,27 @@
 @tailwind utilities;
 
 .pop:hover {
-    transform: translateY(-5px);
-    transition: all .3s;
+    transform: translateY(-3px);
+    transition: all .3s ease-in-out;
+     backface-visibility: hidden;
 }
+
+@keyframes animate-breath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+.animate-breath {
+    animation-name: animate-breath;
+    animation-duration: 2s; /* Duration of one animation cycle */
+    animation-iteration-count: infinite; /* Make it repeat forever */
+    animation-timing-function: linear; /* Smooth, consistent speed */
+  }

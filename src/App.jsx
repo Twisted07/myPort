@@ -8,6 +8,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import logo from "./assets/T1.png"
 import photo from "./assets/photo.jpg"
 import tawLogo from "./assets/tawLogo.png"
+import cleaLogo from "./assets/clea_logo.svg"
 
 function App() {
   function smoothScroll(target, duration) {
@@ -65,6 +66,12 @@ function App() {
 
   const workProjects = [
     {
+      title: "Clea App",
+      icon: <img src={cleaLogo} alt="clea logo" width={50} />,
+      summary: "This is the web version of a finance-based application I built for Clea. It is an application that features inter-bank/inter-wallet transactions, virtual wallet for multi-currency transactions, and a lot more.",
+      link: "https://app.tryclea.com",
+    },
+    {
       title: "The Abundant Wallet",
       icon: <img src={tawLogo} alt="The Abundant Wallet Logo" className="size-8 lg:size-[3rem]" />,
       summary: "The Abundant Wallet is a financial coaching and enlightment platform that provides financial education, coaching, and resources to help individuals and businesses achieve financial freedom.",
@@ -94,22 +101,22 @@ function App() {
   return (
     <>
       <section className="flex flex-col items-center justify-center py-56 text-center bg-gray-700 border-b-2 border-red-300 md:border-b-4">
-        <h1 className="text-xs text-stone-200 md:text-md lg:text-lg">Hello, I am IDRIS ABDULLATEEF, a <span className="block text-2xl font-semibold text-red-300 md:text-4xl lg:text-6xl lg:font-bold">Software Developer</span></h1>
+        <h1 className="text-xs text-stone-200 md:text-md lg:text-lg">Hello, I am IDRIS ABDULLATEEF, a <span className="block text-2xl font-semibold text-red-300 md:text-4xl lg:text-6xl lg:font-bold">Software Engineer</span></h1>
         <i className="mt-3 mb-8 lg:mt-5 lg:mb-10 text-stone-300 w-[50dvw] lg:w-[40dvw] md:text-md lg:text-lg text-xs">who Engineers Tomorrow's solutions, <span className="font-semibold text-red-300">TODAY.</span></i>
 
-        <a href={resume} download={"Abdullateef_Idris_Resume"} className="px-5 py-2 text-xs text-red-300 border border-red-300 rounded-full lg:text-lg pop">Download My Resume</a>
+        <a href={resume} download={"Abdullateef_Idris_Resume"} className="px-5 py-2 text-xs text-red-300 border border-red-300 rounded-full lg:text-lg pop animate-pulse">Download My Resume</a>
       </section>
 
       <section className="flex flex-col items-center justify-center px-8 py-16 gap-14 md:px-16 lg:gap-56 lg:px-24 lg:py-24 lg:grid lg:grid-cols-3 lg:grid-flow-row bg-stone-200">
         <div alt="image" className="col-span-1 w-48 h-48 border-4 lg:w-[20rem] lg:h-[20rem] rounded-full border-red-300 lg:border-8" style={{backgroundImage: `url(${photo})`, backgroundPosition: "center", backgroundSize: "cover"}}></div>
         <div className="col-span-2 text-center lg:text-left">
           <h1 className="mb-5 text-2xl font-bold text-red-400 lg:text-3xl lg:mb-10">About Me</h1>
-          <p className="mb-10 text-sm">
-            I am a skilled Front-End Developer with over 2 years of experience crafting intuitive and visually appealing web applications. I create responsive designs, ensuring seamless user experiences across devices. I am also adept at debugging and optimizing code for performance. I have a strong collaboration skill with a knack for translating client needs into functional, attractive interfaces.
+          <p className="mb-10 text-xl tracking-wide">
+            I am a skilled Software Engineer with over 3 years of experience crafting intuitive and visually appealing web applications. I create responsive designs, ensuring seamless user experiences across devices. I am also adept at debugging and optimizing code for performance. I have a strong collaboration skill with a knack for translating client needs into functional, attractive interfaces.
           </p>
           <div>
-          <a href={resume} download={"Abdullateef_Idris_Resume"} className="px-5 py-2 text-sm font-semibold bg-red-400 border-2 border-red-400 rounded-full lg:mr-3 text-stone-100">Download My Resume</a>
-          <button onClick={handleScroll} className="hidden px-5 py-2 text-sm font-semibold text-red-500 border-2 border-red-400 rounded-full lg:inline-block pop">Contact Me</button>
+          <a href={resume} download={"Abdullateef_Idris_Resume"} className="px-5 py-2 text-lg font-semibold bg-red-400 border-2 border-red-400 rounded-full lg:mr-3 text-stone-100">Download My Resume</a>
+          <button onClick={handleScroll} className="hidden px-5 py-2 text-lg font-semibold text-red-500 border-2 border-red-400 rounded-full lg:inline-block pop animate-breath">Contact Me</button>
           </div>
         </div>
       </section>
